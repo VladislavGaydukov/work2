@@ -1,0 +1,376 @@
+@font-face {
+  font-family: 'TT-lakes-normal';
+  src: url("./font/TTLakes-Regular.woff") format("woff");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family:'TT-lakes-medium' ;
+  src: url('./font/TTLakes-Medium.woff') format('woff');
+  font-weight: medium;
+  font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'TT-lakes-bold';
+    src: url('./font/TTLakes-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+  }
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #F8F8F8;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #FFFFFF;
+  width: 100%;
+ }
+
+.header__left, 
+.header__right {
+  display: flex;
+  justify-content: center;
+  margin-top: 18px;
+  margin-bottom: 18px;
+}
+
+.header__right--emerging {
+  display: none;
+  
+}
+
+.header__right:last-child {
+  margin-right: 16px;
+}
+
+.header__logo {
+  display: inline-block;
+  margin-left: 16px;
+}
+
+.header__button {
+  padding: 0; 
+  border-width: 0;
+  height: 40px;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 16px;
+  background-color: #FFFFFF;
+  cursor: pointer;
+
+}
+
+.header__logo--icon {
+  width: 96.55px;
+  height: 50.81px;
+  position: relative;  
+}
+
+.header__logo::after {
+  position: absolute;
+  content: '';
+  border: 1px solid #EAEAEA;
+  border-radius: 1px;
+  height: 32px;
+  margin-top: 8px;
+  margin-left: 16px;
+}
+
+h1 {
+  font-family: 'TT-lakes-bold';
+  position: relative;
+  margin-left: 16px;
+  margin-top: 24px;
+  font-size: 28px;
+  line-height: 40px;
+  letter-spacing: -0.6px;
+}
+
+h1::before {
+  position: absolute;
+  content: '';
+  border: 4px solid #41F6D7;
+  height: 40px;
+  border-radius: 4px;
+  margin-left: -20px;
+}
+
+.navigation {
+  display: flex;
+  white-space: nowrap;
+  margin-left: 16px;
+  margin-top: 24px;
+  overflow: auto;
+}
+
+.navigation__item {
+  padding: 8px 16px;
+}
+
+.navigation__item--active {
+  border: 2px solid #B8FFEC;
+  background-color: #FFFFFF;
+  border-radius: 6px;
+}
+
+.navigation__name {
+  font-family: 'TT-lakes-medium';
+  text-decoration: none;
+  color: #7E7E82;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+}
+
+.content-text {
+  font-family: 'TT-lakes-normal';
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.content {
+ margin-top: 24px;
+ 
+}
+
+.content-text__next {
+  font-family: 'TT-lakes-medium';
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  margin-left: 24px;
+  margin-top: 10px;
+  position: relative;
+  display: block;
+  padding-bottom: 16px;
+  
+}
+.content-text__next::before {
+  content: '';
+  position: absolute;
+  background-image: url('./img/next.svg' ) ;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 8px;
+  height: 11px;
+  left: -16px;
+  top: 8px;
+}
+
+.container-orientation {
+  display: flex;
+  flex-direction: column;
+}
+
+.content-image__picture {
+  width: 100%;
+  height: auto;
+}
+
+.content-text__first,
+.content-text__second  {
+ margin: 0;
+}
+
+.content-text__second,
+.content-text__third {
+  display: none;
+}
+
+.menu-right__button {
+  display: none;
+}
+@media (min-width: 767.9px) {
+
+  .header__right--emerging {
+    display: contents;
+  }
+  
+  .header__button--driver {
+    margin-right: 24px;
+    position: relative;
+  }
+
+  .header__button--driver::after {
+    position: absolute;
+    content: '';
+    border: 1px solid #EAEAEA;
+    border-radius: 1px;
+    height: 32px;
+    margin-top: 4px;
+    margin-left: 20px;
+  }
+
+
+  .header__right:last-child {
+    margin-right: 24px;
+  }
+
+  .header__button:first-child {
+    margin-left: 24px;
+  }
+  
+
+  .content-text__second {
+    display: block;
+    margin-top: 24px;
+    }
+
+  .content {
+    display: flex;
+    margin-top: 32px;
+  }
+
+  .header__logo {
+    margin-left: 42px;
+  }
+
+  .header__logo::before {
+    position: absolute;
+    content: '';
+    border: 1px solid #EAEAEA;
+    border-radius: 1px;
+    height: 32px;
+    margin-top: 12px;
+    margin-left: -22px;
+  }
+
+  .header__logo::after {
+    height: 0;
+  }
+
+  h1 {
+    margin-left: 24px;
+  }
+  
+  h1::before {
+    margin-left: -28px;
+  }
+  .navigation {
+    margin-left: 24px;
+    margin-top: 32px;
+  }
+
+  .content-text {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+    order: 1;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .content-image {
+    flex-basis: 50%; 
+    order: 2;
+    padding-left: 24px; 
+    padding-right: 24px;
+    
+  }
+
+  .content-image__picture {
+    
+    border-radius: 5px;
+    max-width: 100%;
+    height: auto;
+    
+  }
+}
+
+@media (min-width:1119.9px) {
+  .header {
+    display: none;
+  }
+
+  .navigation {
+    flex-wrap: wrap;
+    margin-top: 8px;
+  }
+
+  h1 {
+    margin-bottom: 8px;
+    margin-top: 42px;
+    margin-left: 32px;
+  }
+
+  h1::before {
+    margin-left: -35px;
+
+  }
+
+  .menu-right__button {
+    font-family: 'TT-lakes-medium';
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0,2px;
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 80px;
+    margin-top: 50px;
+    border: 0 solid #F8F8F8;
+    background-color: #F8F8F8;
+
+  }
+
+  .menu-right__button--first,
+  .menu-right__button--second{
+    position: relative;
+  }
+
+  .menu-right__button--first::after {
+    position: absolute;
+    content: url('./img/repair.png');
+    top: -6px;
+    right: -48px;
+    }
+  .menu-right__button--second::after {
+    position: absolute;
+    content: url('./img/checkstatus.png');
+    top: -6px;
+    right: -48px;
+  }
+
+  .menu__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navigation {
+    margin-top: 0;
+    margin-left: 32px;
+  }
+  
+  .content {
+    margin-top: 10px;
+  }
+
+  .content-text {
+    padding-left: 34px;
+    padding-right: 18px;
+  }
+  
+  .content-image {
+    padding-left: 18px;
+    padding-right: 28px;
+  }
+
+  .content-text__second{
+    display: none;
+  }
+
+  .content-text__third {
+    display: block;
+    margin-top: 24px;
+    margin-bottom: 0;
+  }
+}
